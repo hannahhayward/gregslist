@@ -1,5 +1,6 @@
 import { Car } from "./Models/Car.js"
 import { House } from "./Models/House.js"
+import { Job } from "./Models/Job.js"
 import {Pet} from "./Models/Pet.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -18,6 +19,8 @@ class AppState extends EventEmitter {
   pets = [
     new Pet ("Dog", "Corgie", "Orange", 250,"https://mymodernmet.com/wp/wp-content/uploads/2020/10/cooper-baby-corgi-dogs-8.jpg","10 weeks")
     ]
+    /**@type {Job[]} */
+    jobs = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
